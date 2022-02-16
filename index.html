@@ -24,7 +24,10 @@
             <div class="container">
                 <!--3.1 -->
                 <h2 class="escondido">Comece pelo começo</h2>
-                <h2>Crie suas perguntas</h2>
+                <!--3.2-->
+                <h2 class="escondido">Crie suas perguntas</h2>
+                <!--3.3-->
+                <h2 class="mudarPosicao">Agora, decida os níveis!</h2>
                 <!--aqui é da tela 3.1-->
                 <div class="MontarQuizz escondido">
                     <input type="text" placeholder="Título do seu quizz">
@@ -33,7 +36,7 @@
                     <input type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->
-                <div class="container_Perguntas">
+                <div class="container_Perguntas escondido">
                     <div class="MontarPerguntas">
                         <h3>Pergunta 1</h3>
                         <input type="text" placeholder="Texto da pergunta">
@@ -54,7 +57,21 @@
                         <input type="text" placeholder="URL da imagem 3">
                     </div>
                 </div>
-                <div class="perguntasComIcom">
+                <div class="container_Niveis">
+                    <div class="MontarNiveis">
+                      <h3>Nível 1</h3>
+                      <input class = "distanciar" type="text" placeholder="Título do nível">
+                      <input  class = "distanciar"  type="text" placeholder="% de acerto mínima">
+                      <input class = "distanciar"  type="text" placeholder="URL da imagem do nível">
+                      <form action="" method="post">
+                        <div>
+                            <textarea id="message" name="message" placeholder="Descrição do nível"></textarea>
+                        </div>
+                    </form>
+                    </div>
+                 </div>
+                <!--tela 3.2-->
+                <div class="perguntasComIcom escondido">
                     <div class="pergunta1">
                         <h3>Pergunta 2</h3>
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
@@ -64,11 +81,26 @@
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
                     </div>
                 </div>
-                <!--tela 3.1-->
-                <div class="prosseguirBotao">
+                <!--tela 3.3-->
+                <div class="niveisComIcon">
+                    <div class="pergunta1">
+                        <h3>Nível 2</h3>
+                        <img class="bloco" src="Vector.png" alt="bloco de escrever" />
+                    </div>
+                    <div class="pergunta2">
+                        <h3>Nível 3</h3>
+                        <img class="bloco" src="Vector.png" alt="bloco de escrever" />
+                    </div>
+                </div>
+               
+              
+                <div class="prosseguirBotao ">
+                      <!--tela 3.1-->
                     <p class="escondido">Prosseguir pra criar perguntas</p>
                     <!--essa parte é na tela 3.2-->
-                    <p>Prosseguir pra criar níveis</p>
+                    <p class="escondido">Prosseguir pra criar níveis</p>
+                    <!--tela 3.3-->
+                    <p>Finalizar Quizz</p>
                 </div>
             </div>
         </main>

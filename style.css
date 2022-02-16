@@ -17,7 +17,9 @@ font-weight: 700;
 font-style: normal;
 line-height: 43.36px;
 }
-/*aqui vai o css da DUDA*/
+
+/*aqui vai o css da DUDA */
+
 .containerMain{
     background-color:#FAFAFA;
 }
@@ -76,6 +78,7 @@ input:last-child{
     border-radius: 15px;
     margin-top: 53px;
     margin-left: 24px;
+    /*quando for pra tela 3.2 fazer com que o botão tenha um margin-bottom :61px*/
 }
 p{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -84,5 +87,71 @@ p{
     line-height: 21.09px;
 }
     
+/*esse é o final da tela 3.1 DUDA*/
+/*incicio da tela 3.2 DUDA*/
+
+.MontarPerguntas{
+    background-color: #FFFFFF;
+   margin-top: 29px;
+    display: block;
+    padding-left: 16px;
+    
+}
+.MontarPerguntas h3{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+ font-weight: 700;
+ line-height: 23.44px;
+color: #000000;
+padding-top: 27px;
 
 
+}
+.pergunta1{
+    display: flex;
+    margin-top: 21px;
+    background-color: #FFFFFF;
+    height: 74px;
+    align-items: center;
+}
+.pergunta1 h3{
+margin-left: 17px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+font-weight: 700;
+line-height: 23.44px;
+color: #000000;
+
+}
+.pergunta2{
+    margin-top: 22px;
+    display: flex;
+    background-color: #FFFFFF;
+    height: 74px;
+    align-items: center;
+
+}
+.pergunta2 h3{
+
+margin-left: 17px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+font-weight: 700;
+line-height: 23.44px;
+color: #000000;
+}
+.pergunta1 img{
+    margin-left: 197px;
+    width: 26px;
+    height: 23px;
+}
+.pergunta2 img{
+    margin-left: 197px;
+    width: 26px;
+    height: 23px;
+}
+
+/*aqui vou colocar a classe escondido ( Diegão disse que é bom deixar no final do css)*/
+.escondido{
+    display: none;
+}

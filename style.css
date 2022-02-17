@@ -5,10 +5,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     box-shadow:  0px 4px 4px 0px #00000040;
 
 }
+main{
+    margin-top: 99px;
+}
+
 h1{
 color: #FFFFFF;
 font-size: 37px;

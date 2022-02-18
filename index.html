@@ -33,10 +33,12 @@
                 <!--aqui é da tela 3.1-->
                 <div class="MontarQuizz ">
                     <input type="text" placeholder="Título do seu quizz">
-                    <input class="redBackground" type="text" placeholder="URL da imagem do seu quizz">
-                    <h6>O valor informado não é uma URL válida</h6>
-                    <input  class = "redBackground" type="text" placeholder="Quantidade de perguntas do quizz">
-                    <h6>O quizz deve ter no mínimo 3 perguntas</h6>
+                    <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
+                    <input  type="text" placeholder="URL da imagem do seu quizz">
+                    <h6 class="escondido">O valor informado não é uma URL válida</h6>
+                      <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
+                    <input   type="text" placeholder="Quantidade de perguntas do quizz">
+                    <h6  class="escondido">O quizz deve ter no mínimo 3 perguntas</h6>
                     <input type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->

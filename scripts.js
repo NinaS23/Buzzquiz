@@ -21,7 +21,7 @@ function ValidarQuizz() {
 function ValidarQuizzPerguntas() {
     let perguntas= document.querySelector(".Perguntas_quizz");
     let h6 = document.querySelector("h6")
-    if (perguntas <= "3") {
+     if (perguntas <= "3") {
         perguntas.classList.add("redBackground")
         h6.classList.remove("escondido")
         perguntas[0].placeholder = perguntasquizz.value

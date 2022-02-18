@@ -32,14 +32,14 @@
                 <h2 class="mudarPosicao escondido">Seu quizz está pronto!</h2>
                 <!--aqui é da tela 3.1-->
                 <div class="MontarQuizz ">
-                    <input type="text" placeholder="Título do seu quizz">
+                    <input class="titulo_quizz" type="text" placeholder="Título do seu quizz">
                     <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
-                    <input  type="text" placeholder="URL da imagem do seu quizz">
+                 <input class="Url_quizz"  type="url" name="url" id="url"placeholder="URL da imagem do seu quizz"  pattern="https://.*" >
                     <h6 class="escondido">O valor informado não é uma URL válida</h6>
                       <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
-                    <input   type="text" placeholder="Quantidade de perguntas do quizz">
+                    <input class="Perguntas_quizz"  type="text" placeholder="Quantidade de perguntas do quizz">
                     <h6  class="escondido">O quizz deve ter no mínimo 3 perguntas</h6>
-                    <input type="text" placeholder="Quantidade de níveis do quizz">
+                    <input  class="Niveis_quizz" type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->
                 <div class="container_Perguntas escondido">
@@ -107,7 +107,7 @@
 
                 <div class="prosseguirBotao ">
                     <!--tela 3.1-->
-                    <p class="">Prosseguir pra criar perguntas</p>
+                    <p  class=""  onclick="ValidarQuizzPerguntas() ">Prosseguir pra criar perguntas</p>
                     <!--essa parte é na tela 3.2-->
                     <p class="escondido">Prosseguir pra criar níveis</p>
                     <!--tela 3.3-->
@@ -120,7 +120,7 @@
             </div>
         </main>
     </div>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>

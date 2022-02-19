@@ -1,12 +1,13 @@
 function ValidarQuizz() {
     let urlQuizz = document.querySelector(".Url_quizz")
+    let tituloquizz = document.querySelector(".titulo_quizz").value
     let url = document.getElementsByName('url')
     let h6 = document.querySelector("h6")
         var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
         var regex = new RegExp(expression);
         var t = 'www.google.com';
 
-        if (t.match(regex)) {
+        if (t.match(regex) && urlQuizz.value  !== "") {
             alert("Successful match");
         } else {
             urlQuizz.classList.add("redBackground")/*bonus*/ 
@@ -14,9 +15,7 @@ function ValidarQuizz() {
             url[0].placeholder = 'url_fora_do_padrao';/*bonus*/ 
             alert("Preencha os dados corretamente, pfv!")
         }
-        validarNiveisQUizz()
-        ValidarQuizzPerguntas()
-        validarTituloQuizz()
+        validarTituloQuizz
     }
     function ValidarQuizzPerguntas() {
     let perguntas= document.querySelector(".Perguntas_quizz");
@@ -42,3 +41,5 @@ function ValidarQuizz() {
         alert("Preencha os dados corretamente, pfv!")
     }
 }
+/*todo esse corpo é pra fazer o cartão do trello , criação de um quizz
+*/

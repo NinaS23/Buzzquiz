@@ -86,7 +86,7 @@ function renderOQuizz(raaa) {
                 <div class="texto">${texto}</div>
             </div>
             <button class="reiniciar"  onclick="resetQuizz()">Reiniciar Quizz</button>  
-            <button class="voltar"  onclick="loadMainPage()">Voltar oara home</button>  
+            <button class="voltar"  onclick="loadMainPage()">Voltar para home</button>  
         </div>`
 
 
@@ -149,6 +149,24 @@ function arredonda(x) {
     ret = Math.round(x)
     return ret
     }
-
-
+ 
     
+function resetQuizz(){
+  //fazer o scroll ir pra cima
+  let caixaResultadoEsconder = document.querySelector(".resultado-quizz")
+  caixaResultadoEsconder.classList.add("esconder")
+  //zerar respostas(aqui preciso de joy)
+
+}
+
+function loadMainPage(){
+let SumirPerguntasDiv = document.querySelector(".perguntas")
+let SumirFinalDiv = document.querySelector(".final")
+let tituloClasseSUMIR = document.querySelector(".banner")
+/*selecionar todas as divs e deixar so a da mica sem o queryselctor e 
+dai add a classe esconder em todas menos a tela da mica */
+SumirPerguntasDiv.classList.add("esconder")
+SumirFinalDiv.classList.add("esconder")
+tituloClasseSUMIR.classList.add("esconder")
+console.log(loadMainPage())
+}

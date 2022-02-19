@@ -40,4 +40,5 @@ function validarNiveisQUizz() {
         alert("Preencha os dados corretamente, pfv!")
     }
 }
+todo esse corpo é pra fazer o cartão do trello , criação de um quizz
 */

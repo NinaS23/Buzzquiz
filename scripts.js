@@ -6,7 +6,7 @@ function ValidarQuizz() {
         var regex = new RegExp(expression);
         var t = 'www.google.com';
 
-        if (t.match(regex)) {
+        if (t.match(regex) && urlQuizz.value  !== "") {
             alert("Successful match");
         } else {
             urlQuizz.classList.add("redBackground")/*bonus*/ 
@@ -14,11 +14,9 @@ function ValidarQuizz() {
             url[0].placeholder = 'url_fora_do_padrao';/*bonus*/ 
             alert("Preencha os dados corretamente, pfv!")
         }
-        validarNiveisQUizz()
-        ValidarQuizzPerguntas()
-        validarTituloQuizz()
+        
     }
-function ValidarQuizzPerguntas() {
+/*function ValidarQuizzPerguntas() {
     let perguntas= document.querySelector(".Perguntas_quizz");
     let h6 = document.querySelector("h6")
      if (perguntas <= "3") {
@@ -42,3 +40,4 @@ function validarNiveisQUizz() {
         alert("Preencha os dados corretamente, pfv!")
     }
 }
+*/

@@ -15,8 +15,9 @@ function ValidarQuizz() {
             url[0].placeholder = 'url_fora_do_padrao';/*bonus*/ 
             alert("Preencha os dados corretamente, pfv!")
         }
-        validarTituloQuizz
+      
     }
+    /*
     function ValidarQuizzPerguntas() {
     let perguntas= document.querySelector(".Perguntas_quizz");
     let h6 = document.querySelector("h6")

@@ -45,18 +45,18 @@
                 <div class="container_Perguntas escondido">
                     <div class="MontarPerguntas">
                         <h3>Pergunta 1</h3>
-                        <input type="text" placeholder="Texto da pergunta">
-                        <input type="text" placeholder="Cor de fundo da pergunta">
+                        <input data-identifier="question"type="text" placeholder="Texto da pergunta">
+                        <input data-identifier="question" type="text" placeholder="Cor de fundo da pergunta">
                         <h3>Pergunta 2</h3>
-                        <input type="text" placeholder="Resposta correta">
-                        <input type="text" placeholder="URL da imagem">
+                        <input data-identifier="question" type="text" placeholder="Resposta correta">
+                        <input  data-identifier="question" type="text" placeholder="URL da imagem">
                         <h3>Respostas incorretas</h3>
-                        <input type="text" placeholder="Resposta incorreta 1">
-                        <input type="text" placeholder="URL da imagem 1">
+                        <input data-identifier="question" type="text" placeholder="Resposta incorreta 1">
+                        <input data-identifier="question" type="text" placeholder="URL da imagem 1">
                         <div class="espacinho">
                             <!--só pra separar-->
-                            <input class "espaço_2" type="text" placeholder="Resposta incorreta 2">
-                            <input class "espaço_2" type="text" placeholder="URL da imagem 2">
+                            <input data-identifier="question" class ="espaço_2" type="text" placeholder="Resposta incorreta 2">
+                            <input  data-identifier="question" class ="espaço_2" type="text" placeholder="URL da imagem 2">
                         </div>
                         <!--só pra separar-->
                         <input type="text" placeholder="Resposta incorreta 3">
@@ -67,12 +67,12 @@
                 <div class="container_Niveis escondido">
                     <div class="MontarNiveis">
                         <h3>Nível 1</h3>
-                        <input class="distanciar" type="text" placeholder="Título do nível">
-                        <input class="distanciar" type="text" placeholder="% de acerto mínima">
-                        <input class="distanciar" type="text" placeholder="URL da imagem do nível">
+                        <input data-identifier="level" class="distanciar" type="text" placeholder="Título do nível">
+                        <input data-identifier="level" class="distanciar" type="text" placeholder="% de acerto mínima">
+                        <input data-identifier="level" class="distanciar" type="text" placeholder="URL da imagem do nível">
                         <form action="" method="post">
                             <div>
-                                <textarea id="message" name="message" placeholder="Descrição do nível"></textarea>
+                                <textarea data-identifier="level" id="message" name="message" placeholder="Descrição do nível"></textarea>
                             </div>
                         </form>
                     </div>
@@ -83,22 +83,22 @@
                 </div>
                 <!--tela 3.2-->
                 <div class="perguntasComIcom escondido">
-                    <div class="pergunta1">
+                    <div data-identifier="expand" class="pergunta1">
                         <h3>Pergunta 2</h3>
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
                     </div>
-                    <div class="pergunta2">
+                    <div data-identifier="expand" class="pergunta2">
                         <h3>Pergunta 3</h3>
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
                     </div>
                 </div>
                 <!--tela 3.3-->
                 <div class="niveisComIcon escondido">
-                    <div class="pergunta1">
+                    <div data-identifier="expand" class="pergunta1">
                         <h3>Nível 2</h3>
                         <img class="bloco" src="Vector.png" alt="bloco de escrever" />
                     </div>
-                    <div class="pergunta2">
+                    <div data-identifier="expand" class="pergunta2">
                         <h3>Nível 3</h3>
                         <img class="bloco" src="Vector.png" alt="bloco de escrever" />
                     </div>

@@ -193,14 +193,8 @@ body {
   color: red;
  
 }
- .selecionada{ 
-  width: 331,94px;
-  height: 175,2px;
-  -card-gradient: #00000060, #00000052;
-  /* --card-gradient: rgb(246 243 243 / 32%); */
-  --card-blend-mode: overlay;
-  --card-blend-mode: overlay;
-  background-image: linear-gradient( rgb(242 237 237), #f5f4f4 max(9.5rem, 27vh) );
+.selecionada img{
+  filter: invert(1);
 }
 /*esconder*/
 .esconder{

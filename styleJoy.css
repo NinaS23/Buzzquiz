@@ -202,3 +202,7 @@ body {
   --card-blend-mode: overlay;
   background-image: linear-gradient( rgb(242 237 237), #f5f4f4 max(9.5rem, 27vh) );
 }
+/*esconder*/
+.esconder{
+  display: none;
+}

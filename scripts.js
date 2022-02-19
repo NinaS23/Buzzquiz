@@ -18,7 +18,7 @@ function ValidarQuizz() {
         ValidarQuizzPerguntas()
         validarTituloQuizz()
     }
-function ValidarQuizzPerguntas() {
+    function ValidarQuizzPerguntas() {
     let perguntas= document.querySelector(".Perguntas_quizz");
     let h6 = document.querySelector("h6")
      if (perguntas <= "3") {
@@ -27,16 +27,16 @@ function ValidarQuizzPerguntas() {
         perguntas[0].placeholder = perguntasquizz.value
         alert("Preencha os dados corretamente, pfv!")
         
-    }
+        }
     
-}
-function validarTituloQuizz() {
+    }
+    function validarTituloQuizz() {
     let tituloquizz = document.querySelector(".titulo_quizz").value
     if (tituloquizz.length < 20 && tituloquizz.length > 65) {
         alert("Preencha os dados corretamente, pfv!")
+        }
     }
-}
-function validarNiveisQUizz() {
+    function validarNiveisQUizz() {
     let NiveisQUizz = document.querySelector(".Niveis_quizz")
     if (parseInt(NiveisQUizz.value) < 2) {
         alert("Preencha os dados corretamente, pfv!")

@@ -149,7 +149,15 @@ function arredonda(x) {
     ret = Math.round(x)
     return ret
     }
+ 
+    
+function resetQuizz(){
+  //fazer o scroll ir pra cima
+  let caixaResultadoEsconder = document.querySelector(".resultado-quizz")
+  caixaResultadoEsconder.classList.add("esconder")
+  //zerar respostas(aqui preciso de joy)
 
+}
 
 function loadMainPage(){
 let SumirPerguntasDiv = document.querySelector(".perguntas")

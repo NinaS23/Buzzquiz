@@ -59,9 +59,12 @@ h2{
 .MontarQuizz{
     background-color: #FFFFFF;
    margin-top: 29px;
-    display: block;
+    width: 375px;
+    flex-direction: column;
+    display: flex;
     padding-left: 16px;
     align-items: center;
+    justify-content: center;
 
 }
 input:first-child{

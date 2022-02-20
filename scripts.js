@@ -19,9 +19,10 @@ function ValidarQuizz() {
     ValidarQuizzTitulo()
     validarQuantidadeDePerguntas()
     validarNiveiQuizz()
-    prosseguirPraTelaFinal()
+    trocarTela()
 
 }
+
 function ValidarQuizzTitulo() {
     let tituloquizz = document.querySelector(".titulo_quizz").value
     if (tituloquizz.length > 65 || tituloquizz.length < 20) {
@@ -45,6 +46,24 @@ function validarNiveiQuizz() {
         alert("Preencha os dados corretamente, pfv!")
     }
 }
+  function trocarTela(){
+      let tchauFrase = document.querySelector(".tchau")
+      tchauFrase.classList.add("escondido")
+      let oiPerguntas = document.querySelector(".tchauCriarPerguntas")
+      oiPerguntas.classList.remove("escondido")
+      let TchauMontarQuizz = document.querySelector(".MontarQuizz")
+      TchauMontarQuizz.classList.add("escondido")
+      let OiContainerPerguntas = document.querySelector(".container_Perguntas")
+      OiContainerPerguntas.classList.remove("escondido")
+      let oiPerguntasComIcon = document.querySelector(".perguntasComIcom")
+      oiPerguntasComIcon.classList.remove("escondido")
+      let tchauBotaoInicial = document.querySelector(".TcahuBotaoInicial")
+      tchauBotaoInicial.classList.add("escondido")
+      let OiperguntasBOtao = document.querySelector(".tchauPerguntas")
+      OiperguntasBOtao.classList.remove("escondido")
+      
+  }
+
  /*validação da tela 3.2 Perguntas de um quizz */
 
 function textoPerguntaValidar(){

@@ -23,15 +23,15 @@
         <main>
             <div class="container">
                 <!--3.1 -->
-                <h2 class= "escondido" >Comece pelo começo</h2>
+                <h2 class= "tchau" >Comece pelo começo</h2>
                 <!--3.2-->
-                <h2 class="tchauCriarPerguntas ">Crie suas perguntas</h2>
+                <h2 class="tchauCriarPerguntas escondido">Crie suas perguntas</h2>
                 <!--3.3-->
                 <h2 class="mudarPosicao escondido Hdois" >Agora, decida os níveis!</h2>
                 <!--tela 3.4-->
                 <h2 class="mudarPosicao TRESquatro escondido">Seu quizz está pronto!</h2>
                 <!--aqui é da tela 3.1-->
-                <div class="MontarQuizz escondido ">
+                <div class="MontarQuizz  ">
                     <input class="titulo_quizz" type="text" ng-maxlength="65"  ng-minlength="20" placeholder="Título do seu quizz">
                     <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
                  <input class="Url_quizz"  type="url" name="url" id="url"placeholder="URL da imagem do seu quizz"  pattern="https://.*" >
@@ -42,7 +42,7 @@
                     <input  class="Niveis_quizz" type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->
-                <div class="container_Perguntas ">
+                <div class="container_Perguntas escondido">
                     <div class="MontarPerguntas">
                         <h3>Pergunta 1</h3>
                         <input class="textoPergunta" data-identifier="question"type="text" placeholder="Texto da pergunta">
@@ -82,7 +82,7 @@
                     <div class="text"><p>O quão Potterhead é você?</p></div><!--aqui vai ter que ir pro js pra rodar o da api-->
                 </div>
                 <!--tela 3.2 acho que aq precisa de js tbm-->
-                <div class="perguntasComIcom ">
+                <div class="perguntasComIcom escondido">
                     <div data-identifier="expand" class="pergunta1">
                         <h3>Pergunta 2</h3>
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
@@ -108,9 +108,9 @@
 
                 <div class=" prosseguirBotao  " id = "botaozin">
                     <!--tela 3.1-->
-                    <p  class="escondido"  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
+                    <p  class="TcahuBotaoInicial"  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
                     <!--essa parte é na tela 3.2-->
-                    <p class="tchauPerguntas" onclick="textoPerguntaValidar()">Prosseguir pra criar níveis</p>
+                    <p class="tchauPerguntas escondido" onclick="textoPerguntaValidar()">Prosseguir pra criar níveis</p>
                     <!--tela 3.3-->
                     <p class="telaFinal escondido" onclick="TelaDosNiveisValidar()">Finalizar Quizz</p>
                     <!--tela 3.4-->

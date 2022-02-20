@@ -32,7 +32,7 @@
                 <h2 class="mudarPosicao escondido">Seu quizz está pronto!</h2>
                 <!--aqui é da tela 3.1-->
                 <div class="MontarQuizz ">
-                    <input class="titulo_quizz" type="text" placeholder="Título do seu quizz">
+                    <input class="titulo_quizz" type="text" ng-maxlength="65"  ng-minlength="20" placeholder="Título do seu quizz">
                     <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
                  <input class="Url_quizz"  type="url" name="url" id="url"placeholder="URL da imagem do seu quizz"  pattern="https://.*" >
                     <h6 class="escondido">O valor informado não é uma URL válida</h6>

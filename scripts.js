@@ -7,7 +7,7 @@ function ValidarQuizz() {
         var regex = new RegExp(expression);
         var t = 'www.google.com';
 
-        if (t.match(regex) && urlQuizz.value  !== "") {
+        if (urlQuizz.value.match(regex) ) {
             alert("Successful match");
         } else {
             urlQuizz.classList.add("redBackground")/*bonus*/ 
@@ -15,32 +15,27 @@ function ValidarQuizz() {
             url[0].placeholder = 'url_fora_do_padrao';/*bonus*/ 
             alert("Preencha os dados corretamente, pfv!")
         }
-      
+         ValidarQuizzTitulo()
+         validarQuantidadeDePerguntas()
+         validarNiveiQuizz()
+         
     }
-    /*
-    function ValidarQuizzPerguntas() {
-    let perguntas= document.querySelector(".Perguntas_quizz");
-    let h6 = document.querySelector("h6")
-     if (perguntas <= "3") {
-        perguntas.classList.add("redBackground")
-        h6.classList.remove("escondido")
-        perguntas[0].placeholder = perguntasquizz.value
-        alert("Preencha os dados corretamente, pfv!")
-        
+    function ValidarQuizzTitulo(){
+        let tituloquizz = document.querySelector(".titulo_quizz").value
+        if(tituloquizz.length > 65 || tituloquizz.length < 20  ){
+            alert("Preencha os dados corretamente, pfv!")
         }
+    }
+    function validarQuantidadeDePerguntas(){
+        let perguntasQuizz = document.querySelector(".Perguntas_quizz").value
+        if(perguntasQuizz < 3){
+            alert("Preencha os dados corretamente, pfv!")
+        }
+    }
+    function validarNiveiQuizz(){
+        let NiveisQuizz = document.querySelector(".Niveis_quizz").value
+        if(NiveisQuizz < 2 ){
+            alert("Preencha os dados corretamente, pfv!")
+        }
+    }
     
-    }
-    function validarTituloQuizz() {
-    let tituloquizz = document.querySelector(".titulo_quizz").value
-    if (tituloquizz.length < 20 && tituloquizz.length > 65) {
-        alert("Preencha os dados corretamente, pfv!")
-        }
-    }
-    function validarNiveisQUizz() {
-    let NiveisQUizz = document.querySelector(".Niveis_quizz")
-    if (parseInt(NiveisQUizz.value) < 2) {
-        alert("Preencha os dados corretamente, pfv!")
-    }
-}
-/*todo esse corpo é pra fazer o cartão do trello , criação de um quizz
-*/

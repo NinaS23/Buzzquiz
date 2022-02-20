@@ -121,7 +121,7 @@ function urlPerguntaValidar(){
     let tchauPerguntas = document.querySelector(".tchauPerguntas")
     let pperguntasComIcon = document.querySelector(".perguntasComIcom")
     let tchauCriarPerguntas = document.querySelector(".tchauCriarPerguntas")
-    if(textoPerguntaValidar){
+    
         containerPerguntas.classList.add("escondido")
         tchauPerguntas.classList.add("escondido")
         pperguntasComIcon.classList.add("escondido")
@@ -131,7 +131,7 @@ function urlPerguntaValidar(){
         niveisEsconder.classList.remove("escondido")
         Hdois.classList.remove("escondido")
         
-    }
+    
     }
 
     /* validação dos niveis dos quizz (tela 3.3) */

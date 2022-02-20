@@ -46,6 +46,7 @@ function validarNiveiQuizz() {
     }
 }
  /*validação da tela 3.2 Perguntas de um quizz */
+
 function textoPerguntaValidar(){
 let textoPergunta = document.querySelector(".textoPergunta").value
     if(textoPergunta.length < 20 ){
@@ -90,6 +91,14 @@ function urlPerguntaValidar(){
           alert("No match");
         }
     }
+    /**aqui é pra aparecer a tea 3.3 e sumir 3.2 */
+    function ProsseguiPraCriarNiveis(){
+    let telaFinal = document.querySelector(".telaFinal")/*aparecer */
+    let niveisEsconder = document.querySelector(".container_Niveis")/*aparecer */
+    let niveisComIconSumir = document.querySelector(".niveisComIcon")/*aparecer */
+    let Hdois =document.querySelector(".Hdois")/*aparecer */
+    let containerPerguntas = document.querySelector
+    }
 
     /* validação dos niveis dos quizz (tela 3.3) */
 function TelaDosNiveisValidar() {
@@ -132,7 +141,7 @@ function TelaDosNiveisValidar() {
  }
  /**essa função faz a tela 3.3 sumir e dar lugar a tela 3,4 */
  function prosseguirPraTelaFinal(){
-     let telaFinal = document.querySelector(".telaFinal")/*sumir */
+   let telaFinal = document.querySelector(".telaFinal")/*sumir */
     let niveisEsconder = document.querySelector(".container_Niveis")/*sumir */
     let niveisComIconSumir = document.querySelector(".niveisComIcon")/*sumir */
     let Hdois =document.querySelector(".Hdois")/*sumir */

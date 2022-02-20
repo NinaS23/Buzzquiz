@@ -55,6 +55,7 @@ let textoPergunta = document.querySelector(".textoPergunta").value
     urlPerguntaValidar()
     ValidarInputRespostas()
     validarCorHEXADECIMAL()
+    ProsseguiPraCriarNiveis()
 }
 function urlPerguntaValidar(){
     let urlPergunta = document.querySelector(".urlPergunta")
@@ -97,7 +98,21 @@ function urlPerguntaValidar(){
     let niveisEsconder = document.querySelector(".container_Niveis")/*aparecer */
     let niveisComIconSumir = document.querySelector(".niveisComIcon")/*aparecer */
     let Hdois =document.querySelector(".Hdois")/*aparecer */
-    let containerPerguntas = document.querySelector
+    let containerPerguntas = document.querySelector(".container_Perguntas")
+    let tchauPerguntas = document.querySelector(".tchauPerguntas")
+    let pperguntasComIcon = document.querySelector(".perguntasComIcom")
+    let tchauCriarPerguntas = document.querySelector(".tchauCriarPerguntas")
+    if(textoPerguntaValidar){
+        containerPerguntas.classList.add("escondido")
+        tchauPerguntas.classList.add("escondido")
+        pperguntasComIcon.classList.add("escondido")
+        tchauCriarPerguntas.classList.add("escondido")
+        telaFinal.classList.remove("escondido")
+        niveisComIconSumir.classList.remove("escondido")
+        niveisEsconder.classList.remove("escondido")
+        Hdois.classList.remove("escondido")
+        
+    }
     }
 
     /* validação dos niveis dos quizz (tela 3.3) */

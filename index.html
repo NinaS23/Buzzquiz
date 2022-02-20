@@ -23,22 +23,22 @@
         <main>
             <div class="container">
                 <!--3.1 -->
-                <h2 class= "" >Comece pelo começo</h2>
+                <h2 class= "escondido" >Comece pelo começo</h2>
                 <!--3.2-->
                 <h2 class="escondido">Crie suas perguntas</h2>
                 <!--3.3-->
-                <h2 class="mudarPosicao escondido">Agora, decida os níveis!</h2>
+                <h2 class="mudarPosicao Hdois" >Agora, decida os níveis!</h2>
                 <!--tela 3.4-->
-                <h2 class="mudarPosicao escondido">Seu quizz está pronto!</h2>
+                <h2 class="mudarPosicao TRESquatro escondido">Seu quizz está pronto!</h2>
                 <!--aqui é da tela 3.1-->
-                <div class="MontarQuizz ">
+                <div class="MontarQuizz escondido ">
                     <input class="titulo_quizz" type="text" ng-maxlength="65"  ng-minlength="20" placeholder="Título do seu quizz">
                     <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
                  <input class="Url_quizz"  type="url" name="url" id="url"placeholder="URL da imagem do seu quizz"  pattern="https://.*" >
                     <h6 class="escondido">O valor informado não é uma URL válida</h6>
                       <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
                     <input class="Perguntas_quizz"  type="text" placeholder="Quantidade de perguntas do quizz">
-                    <h6  class="escondido">O quizz deve ter no mínimo 3 perguntas</h6>
+                    <h6  class="escondido Hseis">O quizz deve ter no mínimo 3 perguntas</h6>
                     <input  class="Niveis_quizz" type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->
@@ -64,12 +64,12 @@
                     </div>
                 </div>
                 <!--tela 3.3-->
-                <div class="container_Niveis escondido">
+                <div class="container_Niveis">
                     <div class="MontarNiveis">
                         <h3>Nível 1</h3>
-                        <input data-identifier="level" class="distanciar" type="text" placeholder="Título do nível">
-                        <input data-identifier="level" class="distanciar" type="text" placeholder="% de acerto mínima">
-                        <input data-identifier="level" class="distanciar" type="text" placeholder="URL da imagem do nível">
+                        <input data-identifier="level" class="distanciar titleNivel" type="text" placeholder="Título do nível">
+                        <input data-identifier="level" class="distanciar acertos" type="text" placeholder="% de acerto mínima">
+                        <input data-identifier="level" class="distanciar urlNivel" type="text" placeholder="URL da imagem do nível">
                         <form action="" method="post">
                             <div>
                                 <textarea data-identifier="level" id="message" name="message" placeholder="Descrição do nível"></textarea>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!--tela 3.3-->
-                <div class="niveisComIcon escondido">
+                <div class="niveisComIcon ">
                     <div data-identifier="expand" class="pergunta1">
                         <h3>Nível 2</h3>
                         <img class="bloco" src="Vector.png" alt="bloco de escrever" />
@@ -105,15 +105,15 @@
                 </div>
 
 
-                <div class="prosseguirBotao ">
+                <div class=" prosseguirBotao  " id = "botaozin">
                     <!--tela 3.1-->
-                    <p  class=""  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
+                    <p  class="escondido"  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
                     <!--essa parte é na tela 3.2-->
                     <p class="escondido">Prosseguir pra criar níveis</p>
                     <!--tela 3.3-->
-                    <p class="escondido">Finalizar Quizz</p>
+                    <p class="telaFinal" onclick="TelaDosNiveisValidar()">Finalizar Quizz</p>
                     <!--tela 3.4-->
-                    <p class="escondido">Acessar Quizz</p>
+                    <p class="escondido quatroTres">Acessar Quizz</p>
                 </div>
                 <!--tela 3.4 -- so aparece nessa tela-->
                 <h4 class="escondido">Voltar pra home</h4>

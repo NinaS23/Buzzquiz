@@ -1,3 +1,4 @@
+/*validar o inicio da criação de um quizz */
 function ValidarQuizz() {
     let urlQuizz = document.querySelector(".Url_quizz")
     let tituloquizz = document.querySelector(".titulo_quizz").value
@@ -44,6 +45,42 @@ function validarNiveiQuizz() {
         alert("Preencha os dados corretamente, pfv!")
     }
 }
+ /*validação da tela 3.2 Perguntas de um quizz */
+function textoPerguntaValidar(){
+let textoPergunta = document.querySelector(".textoPergunta").value
+    if(textoPergunta.length < 20 ){
+        alert("Preencha os dados corretamente, pfv!")
+    }
+    urlPerguntaValidar()
+    ValidarInputRespostas()
+}
+function urlPerguntaValidar(){
+    let urlPergunta = document.querySelector(".urlPergunta")
+    let urlPergunta2 = document.querySelector(".urlPergunta2")
+    let urlPergunta3 = document.querySelector(".urlPergunta3")
+    let urlPergunta4  = document.querySelector(".urlPergunta4")
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+    var t = 'www.google.com';
+
+    if (urlPergunta.value.match(regex) && urlPergunta2.value.match(regex) && urlPergunta3.value.match(regex) && urlPergunta4.value.match(regex)){
+        alert("Successful match");
+    }else{
+        alert("Preencha os dados corretamente, pfv!")
+    }
+    }
+    function ValidarInputRespostas(){
+        let respostasCorretas = document.querySelector(".RespostaCorreta").value
+        let respostaIncorreta = document.querySelector(".respostaIncorreta").value
+        let respoINCORRETA = document.querySelector(".respoINCORRETA").value
+        let respostaINC = document.querySelector(".respostaINC").value
+        if(respostasCorretas == "" || respostaIncorreta == "" && respostaINC == "" && respoINCORRETA == ""){
+            alert("Preencha os dados corretamente, pfv!")
+        
+        }
+    }
+    
+
     /* validação dos niveis dos quizz (tela 3.3) */
 function TelaDosNiveisValidar() {
     let url = document.querySelector(".urlNivel")
@@ -83,6 +120,7 @@ function TelaDosNiveisValidar() {
         alert("Preencha os dados corretamente, pfv!")
      }
  }
+ /**essa função faz a tela 3.3 sumir e dar lugar a tela 3,4 */
  function prosseguirPraTelaFinal(){
      let telaFinal = document.querySelector(".telaFinal")/*sumir */
     let niveisEsconder = document.querySelector(".container_Niveis")/*sumir */
@@ -91,6 +129,7 @@ function TelaDosNiveisValidar() {
     let TRESquatro = document.querySelector(".TRESquatro")
     let card = document.querySelector(".cardDecoration")
     let quatroTRES = document.querySelector(".quatroTres")
+    let botaofinal = document.querySelector(".botaoFinal")
     
     if(ValidarQuizz){
        telaFinal.classList.add("escondido")
@@ -100,6 +139,6 @@ function TelaDosNiveisValidar() {
        TRESquatro.classList.remove("escondido")
        card.classList.remove("escondido")
        quatroTRES.classList.remove("escondido")
+       botaofinal.classList.remove("escondido")
     }
  }
- 

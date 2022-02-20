@@ -25,9 +25,9 @@
                 <!--3.1 -->
                 <h2 class= "escondido" >Comece pelo começo</h2>
                 <!--3.2-->
-                <h2 class="escondido">Crie suas perguntas</h2>
+                <h2 class="">Crie suas perguntas</h2>
                 <!--3.3-->
-                <h2 class="mudarPosicao Hdois" >Agora, decida os níveis!</h2>
+                <h2 class="mudarPosicao escondido Hdois" >Agora, decida os níveis!</h2>
                 <!--tela 3.4-->
                 <h2 class="mudarPosicao TRESquatro escondido">Seu quizz está pronto!</h2>
                 <!--aqui é da tela 3.1-->
@@ -42,29 +42,29 @@
                     <input  class="Niveis_quizz" type="text" placeholder="Quantidade de níveis do quizz">
                 </div>
                 <!--tela 3.2-->
-                <div class="container_Perguntas escondido">
+                <div class="container_Perguntas ">
                     <div class="MontarPerguntas">
                         <h3>Pergunta 1</h3>
-                        <input data-identifier="question"type="text" placeholder="Texto da pergunta">
-                        <input data-identifier="question" type="text" placeholder="Cor de fundo da pergunta">
+                        <input class="textoPergunta" data-identifier="question"type="text" placeholder="Texto da pergunta">
+                        <input class="hexa" data-identifier="question" type="text" placeholder="Cor de fundo da pergunta">
                         <h3>Pergunta 2</h3>
-                        <input data-identifier="question" type="text" placeholder="Resposta correta">
-                        <input  data-identifier="question" type="text" placeholder="URL da imagem">
+                        <input class = "RespostaCorreta" data-identifier="question" type="text" placeholder="Resposta correta">
+                        <input class="urlPergunta" data-identifier="question" type="text" placeholder="URL da imagem">
                         <h3>Respostas incorretas</h3>
-                        <input data-identifier="question" type="text" placeholder="Resposta incorreta 1">
-                        <input data-identifier="question" type="text" placeholder="URL da imagem 1">
+                        <input class = "respostaIncorreta" data-identifier="question" type="text" placeholder="Resposta incorreta 1">
+                        <input class="urlPergunta2" data-identifier="question" type="text" placeholder="URL da imagem 1">
                         <div class="espacinho">
                             <!--só pra separar-->
-                            <input data-identifier="question" class ="espaço_2" type="text" placeholder="Resposta incorreta 2">
-                            <input  data-identifier="question" class ="espaço_2" type="text" placeholder="URL da imagem 2">
+                            <input class = "respoINCORRETA" data-identifier="question" class ="espaço_2" type="text" placeholder="Resposta incorreta 2">
+                            <input  class="urlPergunta3" data-identifier="question" class ="espaço_2" type="text" placeholder="URL da imagem 2">
                         </div>
                         <!--só pra separar-->
-                        <input type="text" placeholder="Resposta incorreta 3">
-                        <input type="text" placeholder="URL da imagem 3">
+                        <input class = "respostaINC" type="text" placeholder="Resposta incorreta 3">
+                        <input class="urlPergunta4 type="text" placeholder="URL da imagem 3">
                     </div>
                 </div>
                 <!--tela 3.3-->
-                <div class="container_Niveis">
+                <div class="container_Niveis escondido">
                     <div class="MontarNiveis">
                         <h3>Nível 1</h3>
                         <input data-identifier="level" class="distanciar titleNivel" type="text" placeholder="Título do nível">
@@ -79,10 +79,10 @@
                 </div>
                 <!--tela 3.4 CARD-->
                 <div class="cardDecoration escondido">
-                    <div class="text"><p>O quão Potterhead é você?</p></div>
+                    <div class="text"><p>O quão Potterhead é você?</p></div><!--aqui vai ter que ir pro js pra rodar o da api-->
                 </div>
                 <!--tela 3.2-->
-                <div class="perguntasComIcom escondido">
+                <div class="perguntasComIcom ">
                     <div data-identifier="expand" class="pergunta1">
                         <h3>Pergunta 2</h3>
                         <img class="notas" src="Vector.png" alt="bloco de escrever" />
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!--tela 3.3-->
-                <div class="niveisComIcon ">
+                <div class="niveisComIcon escondido">
                     <div data-identifier="expand" class="pergunta1">
                         <h3>Nível 2</h3>
                         <img class="bloco" src="Vector.png" alt="bloco de escrever" />
@@ -109,14 +109,14 @@
                     <!--tela 3.1-->
                     <p  class="escondido"  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
                     <!--essa parte é na tela 3.2-->
-                    <p class="escondido">Prosseguir pra criar níveis</p>
+                    <p class="" onclick="textoPerguntaValidar()">Prosseguir pra criar níveis</p>
                     <!--tela 3.3-->
-                    <p class="telaFinal" onclick="TelaDosNiveisValidar()">Finalizar Quizz</p>
+                    <p class="telaFinal escondido" onclick="TelaDosNiveisValidar()">Finalizar Quizz</p>
                     <!--tela 3.4-->
                     <p class="escondido quatroTres">Acessar Quizz</p>
                 </div>
                 <!--tela 3.4 -- so aparece nessa tela-->
-                <h4 class="escondido">Voltar pra home</h4>
+                <h4 class="escondido botaoFinal">Voltar pra home</h4>
             </div>
         </main>
     </div>

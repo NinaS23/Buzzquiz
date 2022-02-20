@@ -6,7 +6,7 @@ takeThisQuizz()
 function takeThisQuizz() {
 
     //const oQuizz = quizz.id  ${id}
-    var promQuizz = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/2741")
+    var promQuizz = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${ID-quizz}")
     promQuizz.then(renderOQuizz);
     /*document.querySelector("")*/
 }

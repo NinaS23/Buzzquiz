@@ -53,6 +53,7 @@ let textoPergunta = document.querySelector(".textoPergunta").value
     }
     urlPerguntaValidar()
     ValidarInputRespostas()
+    validarCorHEXADECIMAL()
 }
 function urlPerguntaValidar(){
     let urlPergunta = document.querySelector(".urlPergunta")
@@ -79,7 +80,16 @@ function urlPerguntaValidar(){
         
         }
     }
-    
+    function validarCorHEXADECIMAL(){
+        var expression ="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
+        var regex = new RegExp(expression);
+         let hexadecimal = document.querySelector(".hexa").value
+        if (hexadecimal.match(regex)) {
+          alert("Successful match");
+        } else {
+          alert("No match");
+        }
+    }
 
     /* validação dos niveis dos quizz (tela 3.3) */
 function TelaDosNiveisValidar() {

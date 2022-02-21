@@ -197,7 +197,7 @@ function TelaDosNiveisValidar() {
  }
  /*Não funciona pra expandir as perguntas */
 function perguntasEXPAND(){
-    let perguntasIconExpand = document.querySelector(".perguntasComIcon")
+    let perguntasIconExpand = document.querySelector(".pergunta1")
     let img = document.querySelector(".notas")
     img.classList.add("escondido")
     perguntasIconExpand.innerHTML += `

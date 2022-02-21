@@ -195,3 +195,33 @@ function TelaDosNiveisValidar() {
        botaofinal.classList.remove("escondido")
     }
  }
+ /*Não funciona pra expandir as perguntas */
+function perguntasEXPAND(){
+    let perguntasIconExpand = document.querySelector(".perguntasComIcon")
+    let img = document.querySelector(".notas")
+    img.classList.add("escondido")
+    perguntasIconExpand.innerHTML += `
+
+    <div class="container_Perguntas escondido">
+    <div class="MontarPerguntas">
+        <h3>Pergunta 1</h3>
+        <input class="textoPergunta" data-identifier="question"type="text" placeholder="Texto da pergunta">
+        <input class="hexa" data-identifier="question" type="text" placeholder="Cor de fundo da pergunta">
+        <h3>Pergunta 2</h3>
+        <input class = "RespostaCorreta" data-identifier="question" type="text" placeholder="Resposta correta">
+        <input class="urlPergunta" data-identifier="question" type="text" placeholder="URL da imagem">
+        <h3>Respostas incorretas</h3>
+        <input class = "respostaIncorreta" data-identifier="question" type="text" placeholder="Resposta incorreta 1">
+        <input class="urlPergunta2" data-identifier="question" type="text" placeholder="URL da imagem 1">
+        <div class="espacinho">
+            <!--só pra separar-->
+            <input class = "respoINCORRETA" data-identifier="question" class ="espaço_2" type="text" placeholder="Resposta incorreta 2">
+            <input  class="urlPergunta3" data-identifier="question" class ="espaço_2" type="text" placeholder="URL da imagem 2">
+        </div>
+        <!--só pra separar-->
+        <input class = "respostaINC" type="text" placeholder="Resposta incorreta 3">
+        <input class="urlPergunta4 type="text" placeholder="URL da imagem 3">
+    </div>
+</div>
+    `
+}

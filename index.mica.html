@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="stylesheet/reset.css"/>
     
     <link rel="stylesheet" href="stylesheet/style.css" />
+    <link rel="stylesheet" href="style.duda.css" />
+    <link rel="stylesheet" href="styleJoy.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -17,12 +19,12 @@
     <header>
         <h1>BuzzQuizz</h1>
     </header>
-</body>
 
-<main>
+
+<section>
     <div class="criar-quizz"> 
         <h3>Você não criou nenhum <br/> quizz ainda :(</h3> 
-        <button> 
+        <button onclick="TelaCriarQuizz()"> 
              Criar Quizz
         </button>
     </div>
@@ -42,7 +44,7 @@
         
     </div>
 
-    <h2>Todos os Quizzes</h2>
+    <h2 class="hx">Todos os Quizzes</h2>
 
     <div class="todos-os-quizzes"> 
         <div class="quizz-1">
@@ -61,6 +63,156 @@
        </div>
     </div> 
 
-</main>
+</section>
+<body >
+    
+    <div class="app escondido">
+        <div class="banner" id="banner">
+           <!-- <img src="imagens/hogwarts.png">
+            <div class="titulo">voce é???</div> -->
+        </div> 
+        <div class="perguntas">
+          <!--   <div class="pergunta">
+                <div class="titulo">gxfg</div> 
+                <div class="respostas">
+                    <div class="resposta incorreta" data-identifier="answer" onclick="chooseResponse(this, false, 0)">
+                        <img src="https://http.cat/412.jpg">
+                        <div class="texto">Texto da resposta 2</div>                    
+                    </div>
+                    <div class="resposta correta" data-identifier="answer" onclick="chooseResponse(this, true, 0)">
+                        <img src="https://http.cat/411.jpg">
+                        <div class="texto">Texto da resposta 1</div>
+                    </div>
+                </div>
+            </div>-->
+          
 
+        </div>
+        <div class="final">  
+            <div class="resultado-quizz" data-identifier="quizz-result">
+                    <!--<div class="titulo">10% de acerto mane</div>
+                        <div class="conteudo">
+                            <img src="imagens/preguica.png">
+                            <div class="texto">pirirpororo nivel</div>
+                        </div> -->
+            </div>
+            
+        </div>
+     
+    </div>
+    <div class="containerMain">
+        <!--o topo do site-->
+        <header>
+            <h1>BuzzQuizz</h1>
+        </header>
+        <!--DUDA - TELA3 (loyout = mobile)-->
+        <main>
+            <div class="container">
+                <!--3.1 -->
+                <h2 class= "tchau escondido" >Comece pelo começo</h2>
+                <!--3.2-->
+                <h2 class="tchauCriarPerguntas escondido">Crie suas perguntas</h2>
+                <!--3.3-->
+                <h2 class="mudarPosicao escondido Hdois" >Agora, decida os níveis!</h2>
+                <!--tela 3.4-->
+                <h2 class="mudarPosicao TRESquatro escondido">Seu quizz está pronto!</h2>
+                <!--aqui é da tela 3.1-->
+                <div class="MontarQuizz  escondido">
+                    <input class="titulo_quizz" type="text" ng-maxlength="65"  ng-minlength="20" placeholder="Título do seu quizz">
+                    <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
+                 <input class="Url_quizz"  type="url" name="url" id="url"placeholder="URL da imagem do seu quizz"  pattern="https://.*" >
+                    <h6 class="escondido">O valor informado não é uma URL válida</h6>
+                      <!--QUANDO DER ERRADO , AI POE A CLASSE redBackground e  tira a classe escondida do h6-->
+                    <input class="Perguntas_quizz"  type="text" placeholder="Quantidade de perguntas do quizz">
+                    <h6  class="escondido Hseis">O quizz deve ter no mínimo 3 perguntas</h6>
+                    <input  class="Niveis_quizz" type="text" placeholder="Quantidade de níveis do quizz">
+                </div>
+                <!--tela 3.2-->
+                <div class="container_Perguntas escondido">
+                    <div class="MontarPerguntas">
+                        <h3>Pergunta 1</h3>
+                        <input class="textoPergunta" data-identifier="question"type="text" placeholder="Texto da pergunta">
+                        <input class="hexa" data-identifier="question" type="text" placeholder="Cor de fundo da pergunta">
+                        <h3>Pergunta 2</h3>
+                        <input class = "RespostaCorreta" data-identifier="question" type="text" placeholder="Resposta correta">
+                        <input class="urlPergunta" data-identifier="question" type="text" placeholder="URL da imagem">
+                        <h3>Respostas incorretas</h3>
+                        <input class = "respostaIncorreta" data-identifier="question" type="text" placeholder="Resposta incorreta 1">
+                        <input class="urlPergunta2" data-identifier="question" type="text" placeholder="URL da imagem 1">
+                        <div class="espacinho">
+                            <!--só pra separar-->
+                            <input class = "respoINCORRETA" data-identifier="question" class ="espaço_2" type="text" placeholder="Resposta incorreta 2">
+                            <input  class="urlPergunta3" data-identifier="question" class ="espaço_2" type="text" placeholder="URL da imagem 2">
+                        </div>
+                        <!--só pra separar-->
+                        <input class = "respostaINC" type="text" placeholder="Resposta incorreta 3">
+                        <input class="urlPergunta4 type="text" placeholder="URL da imagem 3">
+                    </div>
+                </div>
+                <!--tela 3.3-->
+                <div class="container_Niveis escondido">
+                    <div class="MontarNiveis">
+                        <h3>Nível 1</h3>
+                        <input data-identifier="level" class="distanciar titleNivel" type="text" placeholder="Título do nível">
+                        <input data-identifier="level" class="distanciar acertos" type="text" placeholder="% de acerto mínima">
+                        <input data-identifier="level" class="distanciar urlNivel" type="text" placeholder="URL da imagem do nível">
+                        <form action="" method="post">
+                            <div>
+                                <textarea data-identifier="level" id="message" name="message" placeholder="Descrição do nível"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--tela 3.4 CARD-->
+                <div class="cardDecoration escondido">
+                    <div class="text"><p>O quão Potterhead é você?</p></div><!--aqui vai ter que ir pro js pra rodar o da api-->
+                </div>
+                <!--tela 3.2 acho que aq precisa de js tbm-->
+                <div class="perguntasComIcom escondido">
+                    <div data-identifier="expand" class="pergunta1">
+                        <h3 >Pergunta 2</h3>
+                        <img onclick="perguntasEXPAND()" class="notas" src="Vector.png" alt="bloco de escrever"  />
+                    </div>
+                    <div data-identifier="expand" class="pergunta2">
+                        <h3>Pergunta 3</h3>
+                        <img class="notas" src="Vector.png" alt="bloco de escrever" />
+                    </div>
+                </div>
+                <!--tela 3.3 acho q aq precisa de js -->
+                
+                <div class="niveisComIcon escondido">
+                    <div data-identifier="expand" class="pergunta1">
+                        <h3>Nível 2</h3>
+                        <img class="bloco" src="Vector.png" alt="bloco de escrever" />
+                    </div>
+                    <div data-identifier="expand" class="pergunta2">
+                        <h3>Nível 3</h3>
+                        <img class="bloco" src="Vector.png" alt="bloco de escrever" />
+                    </div>
+                    
+                </div>
+
+
+                <div class=" prosseguirBotao  escondido" id = "botaozin">
+                    <!--tela 3.1-->
+                    <p  class="TcahuBotaoInicial"  onclick="ValidarQuizz() ">Prosseguir pra criar perguntas</p>
+                    <!--essa parte é na tela 3.2-->
+                    <p class="tchauPerguntas escondido" onclick="textoPerguntaValidar()">Prosseguir pra criar níveis</p>
+                    <!--tela 3.3-->
+                    <p class="telaFinal escondido" onclick="TelaDosNiveisValidar()">Finalizar Quizz</p>
+                    <!--tela 3.4-->
+                    <p class="escondido quatroTres">Acessar Quizz</p>
+                </div>
+                <!--tela 3.4 -- so aparece nessa tela-->
+                <h4 class="escondido botaoFinal">Voltar pra home</h4>
+            </div>
+        </main>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+<script src="scripito.js"></script>
+<script src="scripts.js"></script>
+<script src="mica.js"></script>
+</body>
 </html>

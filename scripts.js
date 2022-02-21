@@ -16,35 +16,41 @@ function ValidarQuizz() {
         url[0].placeholder = 'url_fora_do_padrao';/*bonus*/
         alert("Preencha os dados corretamente, pfv!")
     }
+              
+  
     ValidarQuizzTitulo()
     validarQuantidadeDePerguntas()
-    validarNiveiQuizz()
+     validarNiveiQuizz()
     trocarTela()
 
 }
 
 function ValidarQuizzTitulo() {
     let tituloquizz = document.querySelector(".titulo_quizz").value
-    if (tituloquizz.length > 65 || tituloquizz.length < 20) {
+    while(tituloquizz.length > 65 || tituloquizz.length < 20) {
         alert("Preencha os dados corretamente, pfv!")
     }
+    validarQuantidadeDePerguntas()
+    
 }
 function validarQuantidadeDePerguntas() {
     let perguntasQuizz = document.querySelector(".Perguntas_quizz").value
     let h = document.querySelector(".Hseis")
-    if (perguntasQuizz < 3) {
+    while(perguntasQuizz < 3) {
         alert("Preencha os dados corretamente, pfv!")
         perguntasQuizz.classList.add("redBackground")
         h.classList.remove("escondido")/*bonus*/
 
 
     }
+    validarNiveiQuizz()
 }
 function validarNiveiQuizz() {
     let NiveisQuizz = document.querySelector(".Niveis_quizz").value
-    if (NiveisQuizz < 2) {
+    while (NiveisQuizz < 2) {
         alert("Preencha os dados corretamente, pfv!")
     }
+    trocarTela()
 }
   function trocarTela(){
       let tchauFrase = document.querySelector(".tchau")
@@ -69,12 +75,13 @@ function validarNiveiQuizz() {
 function textoPerguntaValidar(){
 let textoPergunta = document.querySelector(".textoPergunta").value
     if(textoPergunta.length < 20 ){
-        alert("Preencha os dados corretamente, pfv!")
+        alert("Preencha os dados corretamente, pfv!texto")
+    }else{
+        urlPerguntaValidar()
+        ValidarInputRespostas()
+         ProsseguiPraCriarNiveis()
     }
-    urlPerguntaValidar()
-    ValidarInputRespostas()
-    validarCorHEXADECIMAL()
-    ProsseguiPraCriarNiveis()
+    
 }
 function urlPerguntaValidar(){
     let urlPergunta = document.querySelector(".urlPergunta")
@@ -85,11 +92,11 @@ function urlPerguntaValidar(){
     var regex = new RegExp(expression);
     var t = 'www.google.com';
 
-    if (urlPergunta.value.match(regex) && urlPergunta2.value.match(regex) && urlPergunta3.value.match(regex) && urlPergunta4.value.match(regex)){
-        alert("Successful match");
-    }else{
-        alert("Preencha os dados corretamente, pfv!")
+    while(urlPergunta.value.match(regex) && urlPergunta2.value.match(regex) && urlPergunta3.value.match(regex) && urlPergunta4.value.match(regex)){
+        ValidarInputRespostas()
     }
+    alert("Preencha os dados corretamente, pfv!url")
+    
     }
     function ValidarInputRespostas(){
         let respostasCorretas = document.querySelector(".RespostaCorreta").value
@@ -97,11 +104,13 @@ function urlPerguntaValidar(){
         let respoINCORRETA = document.querySelector(".respoINCORRETA").value
         let respostaINC = document.querySelector(".respostaINC").value
         if(respostasCorretas == "" || respostaIncorreta == "" && respostaINC == "" && respoINCORRETA == ""){
+           
             alert("Preencha os dados corretamente, pfv!")
         
         }
+        ProsseguiPraCriarNiveis()
     }
-    function validarCorHEXADECIMAL(){
+  /* function validarCorHEXADECIMAL(){
         var expression ="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
         var regex = new RegExp(expression);
          let hexadecimal = document.querySelector(".hexa").value
@@ -111,6 +120,7 @@ function urlPerguntaValidar(){
           alert("No match");
         }
     }
+    */ 
     /**aqui é pra aparecer a tea 3.3 e sumir 3.2 */
     function ProsseguiPraCriarNiveis(){
     let telaFinal = document.querySelector(".telaFinal")/*aparecer */
@@ -153,25 +163,27 @@ function TelaDosNiveisValidar() {
  }  
  function tituloDoNivelValidar(){
  let nivelTitulo = document.querySelector(".titleNivel").value
- if(nivelTitulo.length < 10){
+ while(nivelTitulo.length < 10){
      alert("Preencha os dados corretamente, pfv!")
  }
+ porcetagemDeAcertoValidar()
+
  }
  function porcetagemDeAcertoValidar(){
      let acertos = document.querySelector(".acertos").value
-     if(acertos < 0 || acertos > 100){
+     while(acertos < 0 || acertos > 100){
         alert("Preencha os dados corretamente, pfv!")
-     }else if(acertos == 0){
-         alert("tem que existir um nivel ao menos , caso a porcentagem min seja 0")
-     }else{
-        alert("Successful match");
+     
+     
      }
+     validarTextArea()
  }
  function validarTextArea(){
      let textArea = document.getElementById("message").value
-     if(textArea.length < 30){
+     while(textArea.length < 30){
         alert("Preencha os dados corretamente, pfv!")
      }
+     prosseguirPraTelaFinal()
  }
  /**essa função faz a tela 3.3 sumir e dar lugar a tela 3,4 */
  function prosseguirPraTelaFinal(){
@@ -199,7 +211,6 @@ function TelaDosNiveisValidar() {
 function perguntasEXPAND(){
     let perguntasIconExpand = document.querySelector(".pergunta1")
     let img = document.querySelector(".notas")
-    img.classList.add("escondido")
     perguntasIconExpand.innerHTML += `
 
     <div class="container_Perguntas escondido">
@@ -224,4 +235,5 @@ function perguntasEXPAND(){
     </div>
 </div>
     `
+    console.log(perguntasIconExpand)
 }
